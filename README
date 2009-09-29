@@ -1,0 +1,17 @@
+A port of Ed Summer's marcdb application (http://inkdroid.org/journal/2007/10/01/marcdb/) to Ruby.
+
+Usage:
+  
+  Initialize the database.  This defaults to SQLite, but it uses DataMapper, so any database supported by DM can be swapped in (edit models.rb to change).
+  
+  $ ruby marcdb.rb init
+  
+  Load some records.
+  
+  $ ruby marcdb.rb load /path/to/records/file (marc|xml)
+  
+  For now you have to specify what serialization your file is (MARC binary or marcxml)
+  
+  You can also view a record by 001
+  
+  $ ruby marcdb.rb view 1234
